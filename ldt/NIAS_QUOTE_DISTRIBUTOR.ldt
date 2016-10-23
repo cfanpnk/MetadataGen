@@ -1,0 +1,5436 @@
+# $Header$
+
+#
+LANGUAGE = "US"
+LDRCONFIG = "//IT/main/code/apps/oracle_apps/12/Appltop/NI/bin/ni_metadata.lct#1 $
+"
+
+
+#Source Database d1ebs
+
+#RELEASE_NAME 12.1.3
+
+# -- Begin Entity Definitions --
+
+DEFINE NI_METADATA
+  KEY   APPLICATION_SHORT_NAME          VARCHAR2(50)
+  KEY   METADATA_NAME                   VARCHAR2(50)
+  BASE  NAME                            VARCHAR2(240)
+  BASE  DESCRIPTION                     VARCHAR2(240)
+  BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+  BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+  BASE  CREATION_DATE                   VARCHAR2(20)
+  BASE  CREATED_BY                      VARCHAR2(100)
+  BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+  DEFINE NI_METADATA_SETTINGS
+    BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+    BASE  METADATA_NAME                   VARCHAR2(50)
+    KEY   SETTING_NAME                    VARCHAR2(50)
+    BASE  DESCRIPTION                     VARCHAR2(100)
+    BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+    BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+    BASE  CREATION_DATE                   VARCHAR2(20)
+    BASE  CREATED_BY                      VARCHAR2(100)
+    BASE  FLEX_VALUE_SET_NAME             VARCHAR2(60)
+    BASE  USED_BY_FLEX_VALUE_SET_NAME     VARCHAR2(60)
+    BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+    DEFINE NI_METADATA_VALUES
+      BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+      BASE  METADATA_NAME                   VARCHAR2(50)
+      BASE  SETTING_NAME                    VARCHAR2(50)
+      BASE  USED_BY                         VARCHAR2(50)
+      BASE  VALUE                           VARCHAR2(2000)
+      BASE  ACTUAL_VALUE                    VARCHAR2(2000)
+      BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+      BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+      BASE  CREATION_DATE                   VARCHAR2(20)
+      BASE  CREATED_BY                      VARCHAR2(100)
+      BASE  ENABLED_FLAG                    VARCHAR2(1)
+    END NI_METADATA_VALUES
+  END NI_METADATA_SETTINGS
+END NI_METADATA
+
+# -- End Entity Definitions --
+
+
+BEGIN NI_METADATA "NIAS" "NIAS_QUOTE_DISTRIBUTOR"
+  NAME = "NIAS Quote Distributor"
+  DESCRIPTION = "Metadata settings for the quote distributor process"
+  LAST_UPDATE_DATE = "26-JUN-2015 14:56:49"
+  LAST_UPDATED_BY = "NPAN"
+  CREATION_DATE = "26-JUN-2015 14:56:49"
+  CREATED_BY = "NPAN"
+  ENABLED_FLAG = "Y"
+  
+    BEGIN NI_METADATA_SETTINGS "ALLOWED_QUOTE_STATUSES"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Quote statuses that will allow the one-off to be ran on."
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Accepted"
+        VALUE = "Accepted"
+        ACTUAL_VALUE = "Accepted"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Approved"
+        VALUE = "Approved"
+        ACTUAL_VALUE = "Approved"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Auto Sent Web"
+        VALUE = "Auto Sent Web"
+        ACTUAL_VALUE = "Auto Sent Web"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Auto UWQ Sent Web"
+        VALUE = "Auto UWQ Sent Web"
+        ACTUAL_VALUE = "Auto UWQ Sent Web"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Distributed"
+        VALUE = "Distributed"
+        ACTUAL_VALUE = "Distributed"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Order Submitted"
+        VALUE = "Order Submitted"
+        ACTUAL_VALUE = "Order Submitted"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Partially Distributed"
+        VALUE = "Partially Distributed"
+        ACTUAL_VALUE = "Partially Distributed"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ALLOWED_QUOTE_STATUSES"
+        USED_BY = "Ready to Distribute"
+        VALUE = "Ready to Distribute"
+        ACTUAL_VALUE = "Ready to Distribute"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ATTACHMENTS_CATEGORY"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Attachement categories to show in the PDF"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "ATTACHMENTS_CATEGORY"
+        USED_BY = "NI Quote Header Note"
+        VALUE = "Yes"
+        ACTUAL_VALUE = "Yes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "COMPANY_ROMAN_NAME"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Use attribute1 to display roman name of company and contact"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "CN-ENG"
+        VALUE = "CN-ENG"
+        ACTUAL_VALUE = "CN-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "CN-RMA-ENG"
+        VALUE = "CN-RMA-ENG"
+        ACTUAL_VALUE = "CN-RMA-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "HK-ENG"
+        VALUE = "HK-ENG"
+        ACTUAL_VALUE = "HK-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "HK-RMA-ENG"
+        VALUE = "HK-RMA-ENG"
+        ACTUAL_VALUE = "HK-RMA-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "TW-ENG"
+        VALUE = "TW-ENG"
+        ACTUAL_VALUE = "TW-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "COMPANY_ROMAN_NAME"
+        USED_BY = "TW-RMA-ENG"
+        VALUE = "TW-RMA-ENG"
+        ACTUAL_VALUE = "TW-RMA-ENG"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CONFIG_ID_EMAIL_URL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Configuration URL displayed in the email"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "CONFIG_ID_EMAIL_URL"
+        USED_BY = "DEFAULT"
+        VALUE = "http://ohm.ni.com/advisors/retrieve?id=<<config_id>>&emailqte=<<quote_number>>"
+        ACTUAL_VALUE = "http://ohm.ni.com/advisors/retrieve?id=<<config_id>>&emailqte=<<quote_number>>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CONFIG_ID_PDF_URL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Configuration URL displayed in the PDF"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "CONFIG_ID_PDF_URL"
+        USED_BY = "DEFAULT"
+        VALUE = "http://ohm.ni.com/advisors/retrieve?id=<<config_id>>&pdfqte=<<quote_number>>"
+        ACTUAL_VALUE = "http://ohm.ni.com/advisors/retrieve?id=<<config_id>>&pdfqte=<<quote_number>>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CONFIG_IMAGE_URL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Configuration image URL"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "CONFIG_IMAGE_URL"
+        USED_BY = "DEFAULT"
+        VALUE = "http://ohm.ni.com/advisors/advisorimage?h=300&configid=<<config_id>>"
+        ACTUAL_VALUE = "http://ohm.ni.com/advisors/advisorimage?h=300&configid=<<config_id>>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DEVELOPMENT_MODE"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Turn development mode on/off"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DEVELOPMENT_MODE"
+        USED_BY = "DEFAULT"
+        VALUE = "NO"
+        ACTUAL_VALUE = "NO"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EMAIL_TEST_PRE_MESSAGE_SUBJECT"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Message that is pre-appended to email subject for testing"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EMAIL_TEST_PRE_MESSAGE_SUBJECT"
+        USED_BY = "DEFAULT"
+        VALUE = "Quote Testing:"
+        ACTUAL_VALUE = "Quote Testing:"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUDE_FAX_AREA_CODE"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Area Code from which the fax is being sent"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_FAX_AREA_CODE"
+        USED_BY = "DEFAULT"
+        VALUE = "512"
+        ACTUAL_VALUE = "512"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUDE_PART"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Exclude the specified Part Number(s) from the printed quote"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "960596-06"
+        VALUE = "960596-06"
+        ACTUAL_VALUE = "960596-06"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "PREMSAPCDAQ"
+        VALUE = "PREMSAPCDAQ"
+        ACTUAL_VALUE = "PREMSAPCDAQ"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "PREMSAPCFP"
+        VALUE = "PREMSAPCFP"
+        ACTUAL_VALUE = "PREMSAPCFP"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "PREMSAPCRIO"
+        VALUE = "PREMSAPCRIO"
+        ACTUAL_VALUE = "PREMSAPCRIO"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "PREMSAPPXI"
+        VALUE = "PREMSAPPXI"
+        ACTUAL_VALUE = "PREMSAPPXI"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "STDSAPCDAQ"
+        VALUE = "STDSAPCDAQ"
+        ACTUAL_VALUE = "STDSAPCDAQ"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "STDSAPCFP"
+        VALUE = "STDSAPCFP"
+        ACTUAL_VALUE = "STDSAPCFP"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "STDSAPCRIO"
+        VALUE = "STDSAPCRIO"
+        ACTUAL_VALUE = "STDSAPCRIO"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_PART"
+        USED_BY = "STDSAPPXI"
+        VALUE = "STDSAPPXI"
+        ACTUAL_VALUE = "STDSAPPXI"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUDE_USER_FROM_EMAIL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Comma delimited list of user names not to be used for email CC"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_FROM_EMAIL"
+        USED_BY = "NIC"
+        VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_FROM_EMAIL"
+        USED_BY = "NIE"
+        VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_FROM_EMAIL"
+        USED_BY = "NIJ"
+        VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUDE_USER_NAMES"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Comma delimited list of user names not to be used for signature"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_NAMES"
+        USED_BY = "NIC"
+        VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_NAMES"
+        USED_BY = "NIE"
+        VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_NAMES"
+        USED_BY = "NIJ"
+        VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUDE_USER_NAMES"
+        USED_BY = "DEFAULT"
+        VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        ACTUAL_VALUE = "WEBJOBS,SALESJOBS,CRMJOBS,SPDJOBS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUSION_EMAIL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EXCLUSION_EMAIL"
+        USED_BY = "CC"
+        VALUE = "\"NI Sales\" <quotes@ni.com>, \"National Instruments Quote\" <webquotes@ni.com>"
+        ACTUAL_VALUE = "\"NI Sales\" <quotes@ni.com>, \"National Instruments Quote\" <webquotes@ni.com>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "JP_PRICE_LIST_DISC_MSG"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Japanese discount price list message - based on customer category (used by)"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "JP_PRICE_LIST_DISC_MSG"
+        USED_BY = "EDUCATION"
+        VALUE = "上記はアカデミックディスカウント適用価格となっております。この価格は本見積宛先と直接お取引の場合のみ有効です。"
+        ACTUAL_VALUE = "上記はアカデミックディスカウント適用価格となっております。この価格は本見積宛先と直接お取引の場合のみ有効です。"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "LIVE_PREVIEW"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Enables/disables the Live Preview feature"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "LIVE_PREVIEW"
+        USED_BY = "DEFAULT"
+        VALUE = "YES"
+        ACTUAL_VALUE = "YES"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "MESSAGES"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Defines custom UI messages related to the Quote Distributor"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "MESSAGES"
+        USED_BY = "MFC_QUOTE_APPROVED"
+        VALUE = "This quote was approved on &APPROVAL_DATE."
+        ACTUAL_VALUE = "This quote was approved on &APPROVAL_DATE."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "MESSAGES"
+        USED_BY = "MFC_QUOTE_NOT_APPROVED"
+        VALUE = "Quote pricing validation failed. Can not be previewed or distributed until approved."
+        ACTUAL_VALUE = "Quote pricing validation failed. Can not be previewed or distributed until approved."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PART_NUMBER_URL_WHERE_CLAUSE"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Whereclause used by get_part_number_url procedure"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "PART_NUMBER_URL_WHERE_CLAUSE"
+        USED_BY = "WHERE_CLAUSE_1"
+        VALUE = "npl.inventory_item_id = msib.inventory_item_id AND msib.segment1 = :p_part_number AND msib.organization_id = :p_organization_id AND msib.inventory_item_status_code != 'Obsolete' AND msib.customer_order_flag = 'Y' AND msib.customer_order_enabled_flag = 'Y' AND msib.attribute3 != 'STARTER KIT' AND msib.attribute6 IN ('C', 'S') AND (msib.item_type IS NULL OR msib.item_type NOT IN ('PTO', 'POC', 'AI', 'ATO', 'AOC')) AND msib.segment1 NOT LIKE '860%' AND msib.segment1 NOT LIKE '500%' AND msib.segment1 NOT LIKE '33%' AND msib.segment1 NOT LIKE '34%' AND msib.segment1 NOT LIKE '35%' AND msib.segment1 NOT LIKE '463%' AND (msib.segment1 NOT LIKE '900%' OR msib.segment1 LIKE '900850%-01' OR msib.segment1 LIKE '900851%-01' OR msib.segment1 LIKE '900854%-01') AND msib.segment1 NOT LIKE '910%' AND msib.segment1 NOT LIKE '886%' AND msib.segment1 NOT LIKE '887%' AND msib.segment1 != '930000-00'"
+        ACTUAL_VALUE = "npl.inventory_item_id = msib.inventory_item_id AND msib.segment1 = :p_part_number AND msib.organization_id = :p_organization_id AND msib.inventory_item_status_code != 'Obsolete' AND msib.customer_order_flag = 'Y' AND msib.customer_order_enabled_flag = 'Y' AND msib.attribute3 != 'STARTER KIT' AND msib.attribute6 IN ('C', 'S') AND (msib.item_type IS NULL OR msib.item_type NOT IN ('PTO', 'POC', 'AI', 'ATO', 'AOC')) AND msib.segment1 NOT LIKE '860%' AND msib.segment1 NOT LIKE '500%' AND msib.segment1 NOT LIKE '33%' AND msib.segment1 NOT LIKE '34%' AND msib.segment1 NOT LIKE '35%' AND msib.segment1 NOT LIKE '463%' AND (msib.segment1 NOT LIKE '900%' OR msib.segment1 LIKE '900850%-01' OR msib.segment1 LIKE '900851%-01' OR msib.segment1 LIKE '900854%-01') AND msib.segment1 NOT LIKE '910%' AND msib.segment1 NOT LIKE '886%' AND msib.segment1 NOT LIKE '887%' AND msib.segment1 != '930000-00'"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "PART_NUMBER_URL_WHERE_CLAUSE"
+        USED_BY = "WHERE_CLAUSE_2"
+        VALUE = "AND (msib.segment1 NOT LIKE '960%' OR msib.segment1 = '960903-01' OR msib.segment1 = '960903-02' OR msib.segment1 = '960903-03' OR msib.segment1 = '960903-04')"
+        ACTUAL_VALUE = "AND (msib.segment1 NOT LIKE '960%' OR msib.segment1 = '960903-01' OR msib.segment1 = '960903-02' OR msib.segment1 = '960903-03' OR msib.segment1 = '960903-04')"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "QUOTE_CURRENCY"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Quote Currrency (format: quote_config:currency_code)"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "BR:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "BR_INV:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "CA_ENG:CAD"
+        VALUE = "Canadian Dollars"
+        ACTUAL_VALUE = "Canadian Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "CA_FRN:CAD"
+        VALUE = "Devises Canadiennes"
+        ACTUAL_VALUE = "Devises Canadiennes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "CN:RMB"
+        VALUE = "￥"
+        ACTUAL_VALUE = "￥"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "CZ:CZK"
+        VALUE = "česká koruna"
+        ACTUAL_VALUE = "česká koruna"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "DK:DKK"
+        VALUE = "Danske kroner"
+        ACTUAL_VALUE = "Danske kroner"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "HK:HKD"
+        VALUE = "HK$"
+        ACTUAL_VALUE = "HK$"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "IN:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "IN_INV:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "JP:JPY"
+        VALUE = "円"
+        ACTUAL_VALUE = "円"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "JP_A_NoDate:JPY"
+        VALUE = "円"
+        ACTUAL_VALUE = "円"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "JP_Academic:JPY"
+        VALUE = "円"
+        ACTUAL_VALUE = "円"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "KR:KRW"
+        VALUE = "원화"
+        ACTUAL_VALUE = "원화"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "MX:MXP"
+        VALUE = "Moneda Nacional"
+        ACTUAL_VALUE = "Moneda Nacional"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "MX_INV:MXP"
+        VALUE = "Moneda Nacional"
+        ACTUAL_VALUE = "Moneda Nacional"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "NO:NOK"
+        VALUE = "Norske kroner"
+        ACTUAL_VALUE = "Norske kroner"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "PR:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "PT:EUR"
+        VALUE = "euros"
+        ACTUAL_VALUE = "euros"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "PT:GBP"
+        VALUE = "PTE"
+        ACTUAL_VALUE = "PTE"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "ROW:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "ROW_INV:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "TW:TWD"
+        VALUE = "TWD"
+        ACTUAL_VALUE = "TWD"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "US:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "US_custom:USD"
+        VALUE = "US Dollars"
+        ACTUAL_VALUE = "US Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "US_GSA:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "US_INV:CAD"
+        VALUE = "Canadian Dollars"
+        ACTUAL_VALUE = "Canadian Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "QUOTE_CURRENCY"
+        USED_BY = "US_INV:USD"
+        VALUE = "U. S. Dollars"
+        ACTUAL_VALUE = "U. S. Dollars"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SUPPORT_EMAIL_ADDRESS"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Support Email Address"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "SUPPORT_EMAIL_ADDRESS"
+        USED_BY = "DEFAULT"
+        VALUE = "natsue.sugiura@ni.com, nie.operations@ni.com"
+        ACTUAL_VALUE = "natsue.sugiura@ni.com, nie.operations@ni.com"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "VLA_PART_NUMBER"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "VLA License Manager Part Number"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "VLA_PART_NUMBER"
+        USED_BY = "1"
+        VALUE = "778910-01"
+        ACTUAL_VALUE = "778910-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "VLA_PART_NUMBER"
+        USED_BY = "2"
+        VALUE = "778910D-01"
+        ACTUAL_VALUE = "778910D-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "VLA_VERBIAGE"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "VLA verbiage"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "VLA_VERBIAGE"
+        USED_BY = "DEFAULT"
+        VALUE = "The software licenses referenced above will be governed by the requirements of the Volume License Program as set forth in the National Instruments Software License Agreement.  In addition, the following information is required for the NI Volume License Program. Specific information may be required before media can be provided, or for use of the NI Volume License Manager.
+
+Group License (One copy of the Volume License Manager installed on a single server)
+a. Software Administrator and Purchasing Contact Information
+   - Name, Address, Telephone, Email address, and Fax
+b. Inclusion of Existing Licenses-The following information must be verified for each existing single-seat license that you wish to add to your volume license:
+   - Product, Platform, and Serial Number
+c. End User List-A list of end users or an installation log generated by the NI Volume License Manager must be completed and submitted to NI in order for end users to receive support through the NI Volume License Program. The required information for each user is:
+   - Name, Phone, Email address, and Location
+d. NI Volume License Manager Information-The following information will need to be submitted to NI after installing the NI Volume License Manager in order to generate a license file for your volume license:
+   - Server Name (Windows Domain Name)
+   - Computer ID (Generated by the NI Volume License Manager)
+
+Multiple Group License (Multiple copies of the Volume License Manager installed on multiple servers)
+a. All requirements of the Group License
+b. Signed Volume License Agreement
+"
+        ACTUAL_VALUE = "The software licenses referenced above will be governed by the requirements of the Volume License Program as set forth in the National Instruments Software License Agreement.  In addition, the following information is required for the NI Volume License Program. Specific information may be required before media can be provided, or for use of the NI Volume License Manager.
+
+Group License (One copy of the Volume License Manager installed on a single server)
+a. Software Administrator and Purchasing Contact Information
+   - Name, Address, Telephone, Email address, and Fax
+b. Inclusion of Existing Licenses-The following information must be verified for each existing single-seat license that you wish to add to your volume license:
+   - Product, Platform, and Serial Number
+c. End User List-A list of end users or an installation log generated by the NI Volume License Manager must be completed and submitted to NI in order for end users to receive support through the NI Volume License Program. The required information for each user is:
+   - Name, Phone, Email address, and Location
+d. NI Volume License Manager Information-The following information will need to be submitted to NI after installing the NI Volume License Manager in order to generate a license file for your volume license:
+   - Server Name (Windows Domain Name)
+   - Computer ID (Generated by the NI Volume License Manager)
+
+Multiple Group License (Multiple copies of the Volume License Manager installed on multiple servers)
+a. All requirements of the Group License
+b. Signed Volume License Agreement
+"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "WEB_QUOTE_URL"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "URL of the web quote"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEB_QUOTE_URL"
+        USED_BY = "DEFAULT"
+        VALUE = "http://sine.ni.com/apps/utf8/niwq.rq2?p_qid=<<encrypted_quote_header_id>>&p_qno=<<encrypted_quote_number>>&p_site=<<site>>"
+        ACTUAL_VALUE = "http://sine.ni.com/apps/utf8/niwq.rq2?p_qid=<<encrypted_quote_header_id>>&p_qno=<<encrypted_quote_number>>&p_site=<<site>>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "WEIGHT_FORMAT_NIC"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Formats to display product weights for NIC orgs"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIC"
+        USED_BY = "DECIMAL_SEP"
+        VALUE = "."
+        ACTUAL_VALUE = "."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIC"
+        USED_BY = "MONETARY_AMOUNT"
+        VALUE = "FM999G999G999D00"
+        ACTUAL_VALUE = "FM999G999G999D00"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIC"
+        USED_BY = "MONETARY_ROUND_TO"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIC"
+        USED_BY = "SUPRESS_DECIMALS"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIC"
+        USED_BY = "THOUSANDS_SEP"
+        VALUE = ","
+        ACTUAL_VALUE = ","
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "WEIGHT_FORMAT_NIE"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Formats to display product weights for NIE orgs"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIE"
+        USED_BY = "DECIMAL_SEP"
+        VALUE = "."
+        ACTUAL_VALUE = "."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIE"
+        USED_BY = "MONETARY_AMOUNT"
+        VALUE = "FM999G999G990D00"
+        ACTUAL_VALUE = "FM999G999G990D00"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIE"
+        USED_BY = "MONETARY_ROUND_TO"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIE"
+        USED_BY = "SUPRESS_DECIMALS"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIE"
+        USED_BY = "THOUSANDS_SEP"
+        VALUE = ","
+        ACTUAL_VALUE = ","
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "WEIGHT_FORMAT_NIJ"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Formats to display product weights for Japan"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIJ"
+        USED_BY = "DECIMAL_SEP"
+        VALUE = "."
+        ACTUAL_VALUE = "."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIJ"
+        USED_BY = "MONETARY_AMOUNT"
+        VALUE = "FM999G999G990D00"
+        ACTUAL_VALUE = "FM999G999G990D00"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIJ"
+        USED_BY = "MONETARY_ROUND_TO"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIJ"
+        USED_BY = "SUPRESS_DECIMALS"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "WEIGHT_FORMAT_NIJ"
+        USED_BY = "THOUSANDS_SEP"
+        VALUE = ","
+        ACTUAL_VALUE = ","
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EDD_ADJUSTMENT"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Adjustments for estimated delivery days for various countries"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AD"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AE"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AG"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AI"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AL"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AN"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AO"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AQ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AR"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AS"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AU"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AW"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BB"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BD"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BG"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BH"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BI"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BJ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BM"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BO"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BS"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BT"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BU"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BV"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BY"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BZ"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CA"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CC"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CH"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CI"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CK"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CL"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CO"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CR"
+        VALUE = "3"
+        ACTUAL_VALUE = "3"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CU"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CV"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CX"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CY"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DJ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DK"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DM"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DO"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "DZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "EC"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "EG"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ES"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ET"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FI"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FJ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FK"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FO"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FR"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GB"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GD"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GH"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GI"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GL"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GQ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GT"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GU"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GY"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HK"
+        VALUE = "3"
+        ACTUAL_VALUE = "3"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HN"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HT"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HU"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ID"
+        VALUE = "5"
+        ACTUAL_VALUE = "5"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IL"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IO"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IQ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IR"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IS"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "JM"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "JO"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "JP"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KE"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KH"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KP"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KR"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KY"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LB"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LC"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LI"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LK"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LR"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LS"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LU"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LY"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MC"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MH"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ML"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MO"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MP"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MQ"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MR"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MS"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MU"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MV"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MX"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MY"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NC"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NE"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NF"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NI"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NL"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NO"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NP"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NR"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NT"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NU"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "NZ"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "OM"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PA"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PE"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PH"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PK"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PL"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PR"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PY"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "QA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "RE"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "RO"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "RW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SA"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SD"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SG"
+        VALUE = "3"
+        ACTUAL_VALUE = "3"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SH"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SJ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SL"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SM"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SO"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SR"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ST"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SU"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SV"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SY"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TC"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TD"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TH"
+        VALUE = "5"
+        ACTUAL_VALUE = "5"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TK"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TO"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TR"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TT"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TV"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "UA"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "UG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "US"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "UY"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VA"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VC"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VE"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VG"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VI"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VN"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "VU"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "WF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "WS"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CZ"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "YE"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "YU"
+        VALUE = "15"
+        ACTUAL_VALUE = "15"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ZA"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ZM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ZR"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ZW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BR"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "FX"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SI"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SK"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "YT"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CT"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LX"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "XC"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CB"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ME"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "EO"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GP"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GR"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "IN"
+        VALUE = "5"
+        ACTUAL_VALUE = "5"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KI"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SB"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SC"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TF"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TW"
+        VALUE = "2"
+        ACTUAL_VALUE = "2"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "UM"
+        VALUE = "3"
+        ACTUAL_VALUE = "3"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AM"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "AZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "BA"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "EE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "EH"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "ER"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GE"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "GS"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "HR"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KG"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "KZ"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "LV"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MD"
+        VALUE = "4"
+        ACTUAL_VALUE = "4"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MK"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "MM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "RU"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TJ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TM"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TP"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "UZ"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "SW"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CD"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "PS"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "--"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "CS"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "TL"
+        VALUE = "7"
+        ACTUAL_VALUE = "7"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "EDD_ADJUSTMENT"
+        USED_BY = "RS"
+        VALUE = "0"
+        ACTUAL_VALUE = "0"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DISPLAY_NAME_CATEGORY"
+      APPLICATION_SHORT_NAME = "NIAS"
+      METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+      DESCRIPTION = "Defines the mapping between country code and display name categories"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "BR"
+        VALUE = "AMERICAS"
+        ACTUAL_VALUE = "AMERICAS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "CL"
+        VALUE = "AMERICAS"
+        ACTUAL_VALUE = "AMERICAS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "CN"
+        VALUE = "EAST_ASIA"
+        ACTUAL_VALUE = "EAST_ASIA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "CO"
+        VALUE = "AMERICAS"
+        ACTUAL_VALUE = "AMERICAS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "TW"
+        VALUE = "EAST_ASIA"
+        ACTUAL_VALUE = "EAST_ASIA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "JP"
+        VALUE = "JAPAN"
+        ACTUAL_VALUE = "JAPAN"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "KR"
+        VALUE = "JAPAN"
+        ACTUAL_VALUE = "JAPAN"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "MX"
+        VALUE = "AMERICAS"
+        ACTUAL_VALUE = "AMERICAS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "MY"
+        VALUE = "EAST_ASIA"
+        ACTUAL_VALUE = "EAST_ASIA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "CR"
+        VALUE = "AMERICAS"
+        ACTUAL_VALUE = "AMERICAS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NIAS"
+        METADATA_NAME = "NIAS_QUOTE_DISTRIBUTOR"
+        SETTING_NAME = "DISPLAY_NAME_CATEGORY"
+        USED_BY = "HK"
+        VALUE = "EAST_ASIA"
+        ACTUAL_VALUE = "EAST_ASIA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+END NI_METADATA
+    

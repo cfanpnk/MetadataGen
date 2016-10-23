@@ -1,0 +1,3358 @@
+# $Header$
+
+#
+LANGUAGE = "US"
+LDRCONFIG = "//IT/main/code/apps/oracle_apps/12/Appltop/NI/bin/ni_metadata.lct#1 $
+"
+
+
+#Source Database d1ebs
+
+#RELEASE_NAME 12.1.3
+
+# -- Begin Entity Definitions --
+
+DEFINE NI_METADATA
+  KEY   APPLICATION_SHORT_NAME          VARCHAR2(50)
+  KEY   METADATA_NAME                   VARCHAR2(50)
+  BASE  NAME                            VARCHAR2(240)
+  BASE  DESCRIPTION                     VARCHAR2(240)
+  BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+  BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+  BASE  CREATION_DATE                   VARCHAR2(20)
+  BASE  CREATED_BY                      VARCHAR2(100)
+  BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+  DEFINE NI_METADATA_SETTINGS
+    BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+    BASE  METADATA_NAME                   VARCHAR2(50)
+    KEY   SETTING_NAME                    VARCHAR2(50)
+    BASE  DESCRIPTION                     VARCHAR2(100)
+    BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+    BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+    BASE  CREATION_DATE                   VARCHAR2(20)
+    BASE  CREATED_BY                      VARCHAR2(100)
+    BASE  FLEX_VALUE_SET_NAME             VARCHAR2(60)
+    BASE  USED_BY_FLEX_VALUE_SET_NAME     VARCHAR2(60)
+    BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+    DEFINE NI_METADATA_VALUES
+      BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+      BASE  METADATA_NAME                   VARCHAR2(50)
+      BASE  SETTING_NAME                    VARCHAR2(50)
+      BASE  USED_BY                         VARCHAR2(50)
+      BASE  VALUE                           VARCHAR2(2000)
+      BASE  ACTUAL_VALUE                    VARCHAR2(2000)
+      BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+      BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+      BASE  CREATION_DATE                   VARCHAR2(20)
+      BASE  CREATED_BY                      VARCHAR2(100)
+      BASE  ENABLED_FLAG                    VARCHAR2(1)
+    END NI_METADATA_VALUES
+  END NI_METADATA_SETTINGS
+END NI_METADATA
+
+# -- End Entity Definitions --
+
+
+BEGIN NI_METADATA "NI" "NI_HW_SERVICE_ITEMS"
+  NAME = "NI THS (Transactional Hardware Service) Configurator"
+  DESCRIPTION = "Metadata for the THS (Transactional Hardware Service) Configurator and related items"
+  LAST_UPDATE_DATE = "26-JUN-2015 14:56:49"
+  LAST_UPDATED_BY = "NPAN"
+  CREATION_DATE = "26-JUN-2015 14:56:49"
+  CREATED_BY = "NPAN"
+  ENABLED_FLAG = "Y"
+  
+    BEGIN NI_METADATA_SETTINGS "DEBUG"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Debug on/off"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEBUG"
+        USED_BY = "NI_HW_SVC_UTIL"
+        VALUE = "No"
+        ACTUAL_VALUE = "No"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEBUG"
+        USED_BY = "NIAS_ADD_HW_SVC"
+        VALUE = "No"
+        ACTUAL_VALUE = "No"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEBUG"
+        USED_BY = "NIOE_ADD_HW_SVC"
+        VALUE = "No"
+        ACTUAL_VALUE = "No"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "QUOTE_STATUS"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Quote header status required to enable THS Configurator"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "ORDER SUBMITTED"
+        VALUE = "ORDER SUBMITTED"
+        ACTUAL_VALUE = "ORDER SUBMITTED"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "AUTO_MAIL"
+        VALUE = "AUTO_MAIL"
+        ACTUAL_VALUE = "AUTO_MAIL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "AUTO_SENT_WEB"
+        VALUE = "AUTO_SENT_WEB"
+        ACTUAL_VALUE = "AUTO_SENT_WEB"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "AUTO_UWQ_SENT_MAIL"
+        VALUE = "AUTO_UWQ_SENT_MAIL"
+        ACTUAL_VALUE = "AUTO_UWQ_SENT_MAIL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "AUTO_UWQ_SENT_WEB"
+        VALUE = "AUTO_UWQ_SENT_WEB"
+        ACTUAL_VALUE = "AUTO_UWQ_SENT_WEB"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QUOTE_STATUS"
+        USED_BY = "DRAFT"
+        VALUE = "DRAFT"
+        ACTUAL_VALUE = "DRAFT"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "REPAIR_PERCENT"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default percentages for the price calculation of repair services (if % not found in NI DNA)"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PERCENT"
+        USED_BY = "FIS"
+        VALUE = "0.015"
+        ACTUAL_VALUE = "0.015"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PERCENT"
+        USED_BY = "GAR"
+        VALUE = "0.07"
+        ACTUAL_VALUE = "0.07"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PERCENT"
+        USED_BY = "REPAIR"
+        VALUE = "0.04"
+        ACTUAL_VALUE = "0.04"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PERCENT"
+        USED_BY = "SYSTEM_GAR"
+        VALUE = "0.07"
+        ACTUAL_VALUE = "0.07"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PERCENT"
+        USED_BY = "SYSTEM_REPAIR"
+        VALUE = "0.04"
+        ACTUAL_VALUE = "0.04"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DEFAULT_PRICE_LIST"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default price list by currency to overwrite OSS Price List"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "USD"
+        VALUE = "US List"
+        ACTUAL_VALUE = "US List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "CAD"
+        VALUE = "Canadian"
+        ACTUAL_VALUE = "Canadian"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "CHF"
+        VALUE = "Switzerland List Price"
+        ACTUAL_VALUE = "Switzerland List Price"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "CLP"
+        VALUE = "Chile Price List"
+        ACTUAL_VALUE = "Chile Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "COP"
+        VALUE = "Colombia Price List"
+        ACTUAL_VALUE = "Colombia Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "CZK"
+        VALUE = "Czech Republic Price List"
+        ACTUAL_VALUE = "Czech Republic Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "DKK"
+        VALUE = "Denmark 30 days list price"
+        ACTUAL_VALUE = "Denmark 30 days list price"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "EUR"
+        VALUE = "EUR Rec. Price List"
+        ACTUAL_VALUE = "EUR Rec. Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "GBP"
+        VALUE = "United Kingdom List Price"
+        ACTUAL_VALUE = "United Kingdom List Price"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "HKD"
+        VALUE = "Hong Kong Price List"
+        ACTUAL_VALUE = "Hong Kong Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "HUF"
+        VALUE = "Hungary Price List"
+        ACTUAL_VALUE = "Hungary Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "JPY"
+        VALUE = "Japan Direct Price List"
+        ACTUAL_VALUE = "Japan Direct Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "KRW"
+        VALUE = "Korea Price List"
+        ACTUAL_VALUE = "Korea Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "MXP"
+        VALUE = "Mexico Price List in Local"
+        ACTUAL_VALUE = "Mexico Price List in Local"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "NOK"
+        VALUE = "Norway List Price"
+        ACTUAL_VALUE = "Norway List Price"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "PLN"
+        VALUE = "Poland Price List"
+        ACTUAL_VALUE = "Poland Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "RMB"
+        VALUE = "China Local Price List"
+        ACTUAL_VALUE = "China Local Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "RON"
+        VALUE = "Romania Price List"
+        ACTUAL_VALUE = "Romania Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "SEK"
+        VALUE = "Sweden List Price"
+        ACTUAL_VALUE = "Sweden List Price"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DEFAULT_PRICE_LIST"
+        USED_BY = "TWD"
+        VALUE = "Taiwan Price List"
+        ACTUAL_VALUE = "Taiwan Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "BUSINESS_PROCESS"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "List of business processes (entitlements) covered by HW services"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "BUSINESS_PROCESS"
+        USED_BY = "Expedited Traceable Cal"
+        VALUE = "Expedited Traceable Cal"
+        ACTUAL_VALUE = "Expedited Traceable Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "BUSINESS_PROCESS"
+        USED_BY = "Guaranteed Adv Replacement"
+        VALUE = "Guaranteed Adv Replacement"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "BUSINESS_PROCESS_PARAMETER"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "List of business processes the NI Hardware Service Contracts report can be ran for"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "BUSINESS_PROCESS_PARAMETER"
+        USED_BY = "Adv Replacemnt &lt;24 HR Delivery"
+        VALUE = "Adv Replacemnt <24 HR Delivery"
+        ACTUAL_VALUE = "Adv Replacemnt <24 HR Delivery"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "BUSINESS_PROCESS_PARAMETER"
+        USED_BY = "Guaranteed Adv Replacement"
+        VALUE = "Guaranteed Adv Replacement"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CAL_PROGRAM_EXCLUSIONS"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Calibration Service that cannot be sold as program"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CAL_PROGRAM_EXCLUSIONS"
+        USED_BY = "DEFAULT"
+        VALUE = "Factory Calibration"
+        ACTUAL_VALUE = "Factory Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CALIBRATION_DOWNGRADE"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Downgrade mapping between two calibrations"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CALIBRATION_DOWNGRADE"
+        USED_BY = "Expedited Traceable Cal"
+        VALUE = "Traceable Calibration"
+        ACTUAL_VALUE = "Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CFD_DFF_CONTEXT"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "DFF context where line number ref. (ATTRIBUTE1) needs to be pulled from for incident calibrations"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CFD_DFF_CONTEXT"
+        USED_BY = "Accredited Calibration"
+        VALUE = "Accredited Calibration"
+        ACTUAL_VALUE = "Accredited Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CFD_DFF_CONTEXT"
+        USED_BY = "Compliant Calibration"
+        VALUE = "Compliant Calibration"
+        ACTUAL_VALUE = "Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CFD_DFF_CONTEXT"
+        USED_BY = "Expedited Traceable Cal"
+        VALUE = "Expedited Traceable Cal"
+        ACTUAL_VALUE = "Expedited Traceable Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "CFD_DFF_CONTEXT"
+        USED_BY = "Traceable Calibration"
+        VALUE = "Traceable Calibration"
+        ACTUAL_VALUE = "Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DISPLAY_NAME"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Display name of services in the THS Form"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DISPLAY_NAME"
+        USED_BY = "Guaranteed Adv Replacement"
+        VALUE = "PSP for HW (Adv. Replacement)"
+        ACTUAL_VALUE = "PSP for HW (Adv. Replacement)"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DISPLAY_NAME"
+        USED_BY = "PSP for HW (Adv. Replacement)"
+        VALUE = "Guaranteed Adv Replacement"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DISPLAY_NAME"
+        USED_BY = "Repair"
+        VALUE = "SSP for HW (Repair)"
+        ACTUAL_VALUE = "SSP for HW (Repair)"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DISPLAY_NAME"
+        USED_BY = "SSP for HW (Repair)"
+        VALUE = "Repair"
+        ACTUAL_VALUE = "Repair"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DURATION_LOV"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Service Program Duration LOV"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DURATION_LOV"
+        USED_BY = "3"
+        VALUE = "3"
+        ACTUAL_VALUE = "3"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "DURATION_LOV"
+        USED_BY = "5"
+        VALUE = "5"
+        ACTUAL_VALUE = "5"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EXCLUDED_SERVICE"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Service PN excluded from validation of service already attached to line"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "PREMSAPCDAQ"
+        VALUE = "PREMSAPCDAQ"
+        ACTUAL_VALUE = "PREMSAPCDAQ"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "PREMSAPCFP"
+        VALUE = "PREMSAPCFP"
+        ACTUAL_VALUE = "PREMSAPCFP"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "PREMSAPCRIO"
+        VALUE = "PREMSAPCRIO"
+        ACTUAL_VALUE = "PREMSAPCRIO"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "PREMSAPPXI"
+        VALUE = "PREMSAPPXI"
+        ACTUAL_VALUE = "PREMSAPPXI"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "STDSAPCDAQ"
+        VALUE = "STDSAPCDAQ"
+        ACTUAL_VALUE = "STDSAPCDAQ"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "STDSAPCDAQ-MS"
+        VALUE = "STDSAPCDAQ-MS"
+        ACTUAL_VALUE = "STDSAPCDAQ-MS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "STDSAPCFP"
+        VALUE = "STDSAPCFP"
+        ACTUAL_VALUE = "STDSAPCFP"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "STDSAPCRIO"
+        VALUE = "STDSAPCRIO"
+        ACTUAL_VALUE = "STDSAPCRIO"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "EXCLUDED_SERVICE"
+        USED_BY = "STDSAPPXI"
+        VALUE = "STDSAPPXI"
+        ACTUAL_VALUE = "STDSAPPXI"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "FACTORY_CAL_PN"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default factory cal if no other cal is available"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FACTORY_CAL_PN"
+        USED_BY = "DEFAULT"
+        VALUE = "960471-01"
+        ACTUAL_VALUE = "960471-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "FIS_PN_LIST"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "FIS PNs to hide from CFDs and use their PN descr. on the dummy consolidated service rollup line"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-303"
+        VALUE = "960903-303"
+        ACTUAL_VALUE = "960903-303"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-305"
+        VALUE = "960903-305"
+        ACTUAL_VALUE = "960903-305"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-313"
+        VALUE = "960903-313"
+        ACTUAL_VALUE = "960903-313"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-315"
+        VALUE = "960903-315"
+        ACTUAL_VALUE = "960903-315"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-323"
+        VALUE = "960903-323"
+        ACTUAL_VALUE = "960903-323"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-325"
+        VALUE = "960903-325"
+        ACTUAL_VALUE = "960903-325"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-333"
+        VALUE = "960903-333"
+        ACTUAL_VALUE = "960903-333"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-335"
+        VALUE = "960903-335"
+        ACTUAL_VALUE = "960903-335"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-343"
+        VALUE = "960903-343"
+        ACTUAL_VALUE = "960903-343"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-345"
+        VALUE = "960903-345"
+        ACTUAL_VALUE = "960903-345"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-403"
+        VALUE = "960903-403"
+        ACTUAL_VALUE = "960903-403"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-405"
+        VALUE = "960903-405"
+        ACTUAL_VALUE = "960903-405"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-413"
+        VALUE = "960903-413"
+        ACTUAL_VALUE = "960903-413"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-415"
+        VALUE = "960903-415"
+        ACTUAL_VALUE = "960903-415"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-423"
+        VALUE = "960903-423"
+        ACTUAL_VALUE = "960903-423"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "FIS_PN_LIST"
+        USED_BY = "960903-425"
+        VALUE = "960903-425"
+        ACTUAL_VALUE = "960903-425"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "GAR_PN"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default GAR service if exact selection on the header form is not available."
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "GAR_PN"
+        USED_BY = "DEFAULT"
+        VALUE = "960680-200"
+        ACTUAL_VALUE = "960680-200"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "GRACE_PERIOD"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Number of days after contract expires, when it is still considered active"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "GRACE_PERIOD"
+        USED_BY = "DEFAULT"
+        VALUE = "60"
+        ACTUAL_VALUE = "60"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "HEADER_CAL_LOV"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Calibration LOV for the header form"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_CAL_LOV"
+        USED_BY = "COMPLIANT CALIBRATION SERVICE"
+        VALUE = "Compliant Calibration"
+        ACTUAL_VALUE = "Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_CAL_LOV"
+        USED_BY = "EXPEDITED TRACEABLE CALIBRATION"
+        VALUE = "Expedited Traceable Cal"
+        ACTUAL_VALUE = "Expedited Traceable Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_CAL_LOV"
+        USED_BY = "ISO 17025 ACCREDITED CALIBRATION SERVICE"
+        VALUE = "ISO 17025 Accredited Cal"
+        ACTUAL_VALUE = "ISO 17025 Accredited Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_CAL_LOV"
+        USED_BY = "TRACEABLE CALIBRATION SERVICE"
+        VALUE = "Traceable Calibration"
+        ACTUAL_VALUE = "Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "HEADER_REPAIR_LOV"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Repair LOV on header form"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_REPAIR_LOV"
+        USED_BY = "Guaranteed Adv Replacement"
+        VALUE = "PSP for HW (Adv. Replacement)"
+        ACTUAL_VALUE = "PSP for HW (Adv. Replacement)"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "HEADER_REPAIR_LOV"
+        USED_BY = "Repair"
+        VALUE = "SSP for HW (Repair)"
+        ACTUAL_VALUE = "SSP for HW (Repair)"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "INCIDENT_PN_DOWNGRADE"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Mapping between incident Expedited Traceable Calibration PNs and incident Traceable Calibration PNs"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960450-11"
+        VALUE = "960450-01"
+        ACTUAL_VALUE = "960450-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960451-11"
+        VALUE = "960451-01"
+        ACTUAL_VALUE = "960451-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960452-11"
+        VALUE = "960452-01"
+        ACTUAL_VALUE = "960452-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960453-11"
+        VALUE = "960453-01"
+        ACTUAL_VALUE = "960453-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960454-11"
+        VALUE = "960454-01"
+        ACTUAL_VALUE = "960454-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960455-11"
+        VALUE = "960455-01"
+        ACTUAL_VALUE = "960455-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960456-11"
+        VALUE = "960456-01"
+        ACTUAL_VALUE = "960456-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960457-11"
+        VALUE = "960457-01"
+        ACTUAL_VALUE = "960457-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960458-11"
+        VALUE = "960458-01"
+        ACTUAL_VALUE = "960458-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960459-11"
+        VALUE = "960459-01"
+        ACTUAL_VALUE = "960459-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960460-11"
+        VALUE = "960460-01"
+        ACTUAL_VALUE = "960460-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960461-11"
+        VALUE = "960461-01"
+        ACTUAL_VALUE = "960461-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960462-11"
+        VALUE = "960462-01"
+        ACTUAL_VALUE = "960462-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960463-11"
+        VALUE = "960463-01"
+        ACTUAL_VALUE = "960463-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960464-11"
+        VALUE = "960464-01"
+        ACTUAL_VALUE = "960464-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960465-11"
+        VALUE = "960465-01"
+        ACTUAL_VALUE = "960465-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "INCIDENT_PN_DOWNGRADE"
+        USED_BY = "960466-11"
+        VALUE = "960466-01"
+        ACTUAL_VALUE = "960466-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Mapping of Mfg Service Types to Business Processes"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "Compliant Calibration"
+        VALUE = "COMPLIANT"
+        ACTUAL_VALUE = "COMPLIANT"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "Expedited Traceable Cal"
+        VALUE = "EXPEDITED TRACEABLE"
+        ACTUAL_VALUE = "EXPEDITED TRACEABLE"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "Guaranteed Adv Replacement"
+        VALUE = "ADV_RP_CONTRACT"
+        ACTUAL_VALUE = "ADV_RP_CONTRACT"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "ISO 17025 Accredited Cal"
+        VALUE = "ACCREDITED"
+        ACTUAL_VALUE = "ACCREDITED"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "Repair"
+        VALUE = "REPAIR"
+        ACTUAL_VALUE = "REPAIR"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MFG_SERVICE_TYPE_TO_BP_MAPPING"
+        USED_BY = "Traceable Calibration"
+        VALUE = "TRACEABLE"
+        ACTUAL_VALUE = "TRACEABLE"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "MISSING_BC_EMAIL_GROUP"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Email group added to error message if BC is missing on product"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "MISSING_BC_EMAIL_GROUP"
+        USED_BY = "DEFAULT"
+        VALUE = "marketing.configuration@ni.com"
+        ACTUAL_VALUE = "marketing.configuration@ni.com"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ORDER_HEADER_CATEGORY_CODE"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Order header transaction type category code where Header THS Configurator is not available"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_HEADER_CATEGORY_CODE"
+        USED_BY = "DEFAULT"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_HEADER_CATEGORY_CODE"
+        USED_BY = "MIXED"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_HEADER_CATEGORY_CODE"
+        USED_BY = "RETURN"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ORDER_LINE_CATEGORY_CODE"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Order line transaction type category code where line THS Configurator is not available"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_LINE_CATEGORY_CODE"
+        USED_BY = "DEFAULT"
+        VALUE = "RETURN"
+        ACTUAL_VALUE = "RETURN"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ORDER_STATUS"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Order Line and/or header status required to enable THS Configurator"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_STATUS"
+        USED_BY = "AWAITING_FULFILLMENT"
+        VALUE = "AWAITING_FULFILLMENT"
+        ACTUAL_VALUE = "AWAITING_FULFILLMENT"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_STATUS"
+        USED_BY = "AWAITING_SHIPPING"
+        VALUE = "AWAITING_SHIPPING"
+        ACTUAL_VALUE = "AWAITING_SHIPPING"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_STATUS"
+        USED_BY = "BOOKED"
+        VALUE = "BOOKED"
+        ACTUAL_VALUE = "BOOKED"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_STATUS"
+        USED_BY = "CLOSED"
+        VALUE = "CLOSED"
+        ACTUAL_VALUE = "CLOSED"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_STATUS"
+        USED_BY = "ENTERED"
+        VALUE = "ENTERED"
+        ACTUAL_VALUE = "ENTERED"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ORDER_TYPES_SPECIAL_PL"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "List of OE types who will have PL calculated based on OE type and currency to overwrite OSS PL"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_TYPES_SPECIAL_PL"
+        USED_BY = "HK OSS Depot Repair"
+        VALUE = "Yes"
+        ACTUAL_VALUE = "Yes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_TYPES_SPECIAL_PL"
+        USED_BY = "Intl OSS Repair"
+        VALUE = "Yes"
+        ACTUAL_VALUE = "Yes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ORDER_TYPES_SPECIAL_PL"
+        USED_BY = "TW OSS Depot Repair"
+        VALUE = "Yes"
+        ACTUAL_VALUE = "Yes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PDI_ERROR_MSG"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Message that comes up, if PDI call errors"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PDI_ERROR_MSG"
+        USED_BY = "DEFAULT"
+        VALUE = "This product is not marked as Customer Facing. Please contact product.data.support@ni.com."
+        ACTUAL_VALUE = "This product is not marked as Customer Facing. Please contact product.data.support@ni.com."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PN_ENTITLEMENT"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "PN to entitlement (services) mapping - Used if Rules Engine is down"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-001"
+        VALUE = ",Traceable Calibration"
+        ACTUAL_VALUE = ",Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-002"
+        VALUE = ",Compliant Calibration"
+        ACTUAL_VALUE = ",Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-003"
+        VALUE = ",ISO 17025 Accredited Cal"
+        ACTUAL_VALUE = ",ISO 17025 Accredited Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-100"
+        VALUE = "Repair,"
+        ACTUAL_VALUE = "Repair,"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-101"
+        VALUE = "Repair,Traceable Calibration"
+        ACTUAL_VALUE = "Repair,Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-102"
+        VALUE = "Repair,Compliant Calibration"
+        ACTUAL_VALUE = "Repair,Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-103"
+        VALUE = "Repair,ISO 17025 Accredited Cal"
+        ACTUAL_VALUE = "Repair,ISO 17025 Accredited Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-200"
+        VALUE = "Guaranteed Adv Replacement,"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement,"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-201"
+        VALUE = "Guaranteed Adv Replacement,Traceable Calibration,Expedited Traceable Cal"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement,Traceable Calibration,Expedited Traceable Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-202"
+        VALUE = "Guaranteed Adv Replacement,Compliant Calibration"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement,Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PN_ENTITLEMENT"
+        USED_BY = "960680-203"
+        VALUE = "Guaranteed Adv Replacement,ISO 17025 Accredited Cal"
+        ACTUAL_VALUE = "Guaranteed Adv Replacement,ISO 17025 Accredited Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PROF_SERVICE_PN_MAPPING"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Mapping of professional service name in THS Configurator to PN"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PROF_SERVICE_PN_MAPPING"
+        USED_BY = "Tech Support"
+        VALUE = "930999-01"
+        ACTUAL_VALUE = "930999-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "PROF_SERVICE_PN_MAPPING"
+        USED_BY = "Training Credit"
+        VALUE = "780153-01"
+        ACTUAL_VALUE = "780153-01"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "RENEWAL_PN"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Dummy PN to be used for HW service renewals"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "RENEWAL_PN"
+        USED_BY = "HW RENEW"
+        VALUE = "HW RENEW"
+        ACTUAL_VALUE = "HW RENEW"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "REPAIR_PN"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default repair service if exact selection on the header form is not available."
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "REPAIR_PN"
+        USED_BY = "DEFAULT"
+        VALUE = "960680-100"
+        ACTUAL_VALUE = "960680-100"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ROLLUP_NON_SYSTEM"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "LOV for non-System Rollup option parameter for Quote, SOA and Fin.Invoice"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_NON_SYSTEM"
+        USED_BY = "DETAILED"
+        VALUE = "Detailed"
+        ACTUAL_VALUE = "Detailed"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ROLLUP_PN"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Rollup PN for consolidated HW service rollup"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_PN"
+        USED_BY = "CONFIG_ID"
+        VALUE = "SRV-<<config_id>>"
+        ACTUAL_VALUE = "SRV-<<config_id>>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ROLLUP_SERVICE_PN_LIST"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Service PNs what get rolled up in CFD HW rollup code"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-001"
+        VALUE = "960680-001"
+        ACTUAL_VALUE = "960680-001"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-002"
+        VALUE = "960680-002"
+        ACTUAL_VALUE = "960680-002"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-003"
+        VALUE = "960680-003"
+        ACTUAL_VALUE = "960680-003"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-100"
+        VALUE = "960680-100"
+        ACTUAL_VALUE = "960680-100"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-101"
+        VALUE = "960680-101"
+        ACTUAL_VALUE = "960680-101"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-102"
+        VALUE = "960680-102"
+        ACTUAL_VALUE = "960680-102"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-103"
+        VALUE = "960680-103"
+        ACTUAL_VALUE = "960680-103"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-200"
+        VALUE = "960680-200"
+        ACTUAL_VALUE = "960680-200"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-201"
+        VALUE = "960680-201"
+        ACTUAL_VALUE = "960680-201"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-202"
+        VALUE = "960680-202"
+        ACTUAL_VALUE = "960680-202"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-203"
+        VALUE = "960680-203"
+        ACTUAL_VALUE = "960680-203"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-300"
+        VALUE = "960680-300"
+        ACTUAL_VALUE = "960680-300"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-301"
+        VALUE = "960680-301"
+        ACTUAL_VALUE = "960680-301"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-302"
+        VALUE = "960680-302"
+        ACTUAL_VALUE = "960680-302"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-303"
+        VALUE = "960680-303"
+        ACTUAL_VALUE = "960680-303"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-400"
+        VALUE = "960680-400"
+        ACTUAL_VALUE = "960680-400"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-401"
+        VALUE = "960680-401"
+        ACTUAL_VALUE = "960680-401"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-402"
+        VALUE = "960680-402"
+        ACTUAL_VALUE = "960680-402"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SERVICE_PN_LIST"
+        USED_BY = "960680-403"
+        VALUE = "960680-403"
+        ACTUAL_VALUE = "960680-403"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "ROLLUP_SYSTEM"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "LOV for System Rollup option parameter for Quote, SOA and Fin.Invoice"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SYSTEM"
+        USED_BY = "CONSOLIDATED"
+        VALUE = "Consolidated"
+        ACTUAL_VALUE = "Consolidated"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "ROLLUP_SYSTEM"
+        USED_BY = "DETAILED"
+        VALUE = "Detailed"
+        ACTUAL_VALUE = "Detailed"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "RULES_ENGINE_ON"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default is Yes. Set to No if Rules Engine is down to use PN_ENTITLEMENT setting instead for mapping"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "RULES_ENGINE_ON"
+        USED_BY = "DEFAULT"
+        VALUE = "Yes"
+        ACTUAL_VALUE = "Yes"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SERVICE_BOOKINGS_CLASSES"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Eligible Bookings Classes for HW Service modifiers"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "1 Year Warranty"
+        VALUE = "1 Year Warranty"
+        ACTUAL_VALUE = "1 Year Warranty"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "3-Year Calibration Program"
+        VALUE = "3-Year Calibration Program"
+        ACTUAL_VALUE = "3-Year Calibration Program"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Calibration Only Service Program"
+        VALUE = "Calibration Only Service Program"
+        ACTUAL_VALUE = "Calibration Only Service Program"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Extended Warranty (Legacy)"
+        VALUE = "Extended Warranty (Legacy)"
+        ACTUAL_VALUE = "Extended Warranty (Legacy)"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Premium Program"
+        VALUE = "Premium Program"
+        ACTUAL_VALUE = "Premium Program"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Premium Service Program for Hardware"
+        VALUE = "Premium Service Program for Hardware"
+        ACTUAL_VALUE = "Premium Service Program for Hardware"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Premium Service Program for Systems"
+        VALUE = "Premium Service Program for Systems"
+        ACTUAL_VALUE = "Premium Service Program for Systems"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Standard Program"
+        VALUE = "Standard Program"
+        ACTUAL_VALUE = "Standard Program"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Standard Service Program for Hardware"
+        VALUE = "Standard Service Program for Hardware"
+        ACTUAL_VALUE = "Standard Service Program for Hardware"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_BOOKINGS_CLASSES"
+        USED_BY = "Standard Service Program for Systems"
+        VALUE = "Standard Service Program for Systems"
+        ACTUAL_VALUE = "Standard Service Program for Systems"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SERVICE_OPTION_NAME"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Maps the bookings class to the service option name"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_OPTION_NAME"
+        USED_BY = "Compliant Calibration"
+        VALUE = "Compliant Calibration"
+        ACTUAL_VALUE = "Compliant Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_OPTION_NAME"
+        USED_BY = "Expedited Traceable Calibration"
+        VALUE = "Expedited Traceable Cal"
+        ACTUAL_VALUE = "Expedited Traceable Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_OPTION_NAME"
+        USED_BY = "Factory Calibration"
+        VALUE = "Factory Calibration"
+        ACTUAL_VALUE = "Factory Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_OPTION_NAME"
+        USED_BY = "ISO 17025 Calibration"
+        VALUE = "ISO 17025 Accredited Cal"
+        ACTUAL_VALUE = "ISO 17025 Accredited Cal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SERVICE_OPTION_NAME"
+        USED_BY = "Traceable Calibration"
+        VALUE = "Traceable Calibration"
+        ACTUAL_VALUE = "Traceable Calibration"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SOAP_FIELD"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Begin and End tags for field called from Rules Engine"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_FIELD"
+        USED_BY = "DECODE_BEGIN"
+        VALUE = "<har:service><har:name>"
+        ACTUAL_VALUE = "<har:service><har:name>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_FIELD"
+        USED_BY = "DECODE_END"
+        VALUE = "</har:name></har:service>"
+        ACTUAL_VALUE = "</har:name></har:service>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_FIELD"
+        USED_BY = "ENCODE_BEGIN"
+        VALUE = "<har:value>"
+        ACTUAL_VALUE = "<har:value>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_FIELD"
+        USED_BY = "ENCODE_END"
+        VALUE = "</har:value>"
+        ACTUAL_VALUE = "</har:value>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SOAP_NS"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Namespace for Rules Engine call"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_NS"
+        USED_BY = "DEFAULT"
+        VALUE = "http://www.ni.com/services/hardware"
+        ACTUAL_VALUE = "http://www.ni.com/services/hardware"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SOAP_REQ_END"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "End part of SOAP request for Rules Engines"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_REQ_END"
+        USED_BY = "DECODE"
+        VALUE = "</serviceCollection></par:serviceCollection>
+</item:ItemDecoderRequest>
+</soapenv:Body>
+</soapenv:Envelope>"
+        ACTUAL_VALUE = "</serviceCollection></par:serviceCollection>
+</item:ItemDecoderRequest>
+</soapenv:Body>
+</soapenv:Envelope>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_REQ_END"
+        USED_BY = "ENCODE"
+        VALUE = "</partNumber>
+</par:partNumber>
+</item:ItemEncoderRequest>
+</soapenv:Body>
+</soapenv:Envelope>"
+        ACTUAL_VALUE = "</partNumber>
+</par:partNumber>
+</item:ItemEncoderRequest>
+</soapenv:Body>
+</soapenv:Envelope>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SOAP_REQ_TOP"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Top part of SOAP request for Rules Engine"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_REQ_TOP"
+        USED_BY = "DECODE"
+        VALUE = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:item=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemDecoder\" xmlns:par=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemDecoder/param\" xmlns:har=\"http://www.ni.com/services/hardware\">
+<soapenv:Header/>
+<soapenv:Body>
+<item:ItemDecoderRequest>
+<par:serviceCollection>
+<serviceCollection>"
+        ACTUAL_VALUE = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:item=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemDecoder\" xmlns:par=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemDecoder/param\" xmlns:har=\"http://www.ni.com/services/hardware\">
+<soapenv:Header/>
+<soapenv:Body>
+<item:ItemDecoderRequest>
+<par:serviceCollection>
+<serviceCollection>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_REQ_TOP"
+        USED_BY = "ENCODE"
+        VALUE = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:item=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemEncoder\" xmlns:par=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemEncoder/param\" xmlns:har=\"http://www.ni.com/services/hardware\">
+<soapenv:Header/>
+<soapenv:Body>
+<item:ItemEncoderRequest>
+<par:partNumber>
+<partNumber>"
+        ACTUAL_VALUE = "<?xml version=\"1.0\" encoding=\"utf-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:item=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemEncoder\" xmlns:par=\"http://www.ibm.com/rules/decisionservice/HardwareServices/ItemEncoder/param\" xmlns:har=\"http://www.ni.com/services/hardware\">
+<soapenv:Header/>
+<soapenv:Body>
+<item:ItemEncoderRequest>
+<par:partNumber>
+<partNumber>"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SOAP_URL"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "URL for Rules Engine"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_URL"
+        USED_BY = "DECODE"
+        VALUE = "http://secant.natinst.com/DecisionService/ws/hardwareServices/itemDecoder"
+        ACTUAL_VALUE = "http://secant.natinst.com/DecisionService/ws/hardwareServices/itemDecoder"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SOAP_URL"
+        USED_BY = "ENCODE"
+        VALUE = "http://secant.natinst.com/DecisionService/ws/hardwareServices/itemEncoder"
+        ACTUAL_VALUE = "http://secant.natinst.com/DecisionService/ws/hardwareServices/itemEncoder"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SPECIAL_DEFAULT_PRICE_LIST"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Default price list by oe type and currency to overwrite OSS Price List"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SPECIAL_DEFAULT_PRICE_LIST"
+        USED_BY = "HK OSS Depot Repair_USD"
+        VALUE = "China Price List"
+        ACTUAL_VALUE = "China Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SPECIAL_DEFAULT_PRICE_LIST"
+        USED_BY = "Intl OSS Repair_USD"
+        VALUE = "International"
+        ACTUAL_VALUE = "International"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "SPECIAL_DEFAULT_PRICE_LIST"
+        USED_BY = "TW OSS Depot Repair_USD"
+        VALUE = "China Price List"
+        ACTUAL_VALUE = "China Price List"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "TIER_SUFFIX"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Controls which web server is being called"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "TIER_SUFFIX"
+        USED_BY = "DEFAULT"
+        VALUE = ""
+        ACTUAL_VALUE = ""
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "TIER_SUFFIX"
+        USED_BY = "DEVELOPMENT"
+        VALUE = "-dev"
+        ACTUAL_VALUE = "-dev"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "TIER_SUFFIX"
+        USED_BY = "PRODUCTION"
+        VALUE = ""
+        ACTUAL_VALUE = ""
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "TIER_SUFFIX"
+        USED_BY = "TEST"
+        VALUE = "-test"
+        ACTUAL_VALUE = "-test"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "QP_PRICING_FORMULA"
+      APPLICATION_SHORT_NAME = "NI"
+      METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+      DESCRIPTION = "Pricing formula ID used in qp_custom"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NI"
+        METADATA_NAME = "NI_HW_SERVICE_ITEMS"
+        SETTING_NAME = "QP_PRICING_FORMULA"
+        USED_BY = "DEFAULT"
+        VALUE = ""
+        ACTUAL_VALUE = ""
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+END NI_METADATA
+    

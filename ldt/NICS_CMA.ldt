@@ -1,0 +1,1806 @@
+# $Header$
+
+#
+LANGUAGE = "US"
+LDRCONFIG = "//IT/main/code/apps/oracle_apps/12/Appltop/NI/bin/ni_metadata.lct#1 $
+"
+
+
+#Source Database d1ebs
+
+#RELEASE_NAME 12.1.3
+
+# -- Begin Entity Definitions --
+
+DEFINE NI_METADATA
+  KEY   APPLICATION_SHORT_NAME          VARCHAR2(50)
+  KEY   METADATA_NAME                   VARCHAR2(50)
+  BASE  NAME                            VARCHAR2(240)
+  BASE  DESCRIPTION                     VARCHAR2(240)
+  BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+  BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+  BASE  CREATION_DATE                   VARCHAR2(20)
+  BASE  CREATED_BY                      VARCHAR2(100)
+  BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+  DEFINE NI_METADATA_SETTINGS
+    BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+    BASE  METADATA_NAME                   VARCHAR2(50)
+    KEY   SETTING_NAME                    VARCHAR2(50)
+    BASE  DESCRIPTION                     VARCHAR2(100)
+    BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+    BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+    BASE  CREATION_DATE                   VARCHAR2(20)
+    BASE  CREATED_BY                      VARCHAR2(100)
+    BASE  FLEX_VALUE_SET_NAME             VARCHAR2(60)
+    BASE  USED_BY_FLEX_VALUE_SET_NAME     VARCHAR2(60)
+    BASE  ENABLED_FLAG                    VARCHAR2(1)
+
+    DEFINE NI_METADATA_VALUES
+      BASE  APPLICATION_SHORT_NAME          VARCHAR2(50)
+      BASE  METADATA_NAME                   VARCHAR2(50)
+      BASE  SETTING_NAME                    VARCHAR2(50)
+      BASE  USED_BY                         VARCHAR2(50)
+      BASE  VALUE                           VARCHAR2(2000)
+      BASE  ACTUAL_VALUE                    VARCHAR2(2000)
+      BASE  LAST_UPDATE_DATE                VARCHAR2(20)
+      BASE  LAST_UPDATED_BY                 VARCHAR2(100)
+      BASE  CREATION_DATE                   VARCHAR2(20)
+      BASE  CREATED_BY                      VARCHAR2(100)
+      BASE  ENABLED_FLAG                    VARCHAR2(1)
+    END NI_METADATA_VALUES
+  END NI_METADATA_SETTINGS
+END NI_METADATA
+
+# -- End Entity Definitions --
+
+
+BEGIN NI_METADATA "NICS" "NICS_CMA"
+  NAME = "Multi-license Management Tool"
+  DESCRIPTION = ""
+  LAST_UPDATE_DATE = "26-JUN-2015 14:56:49"
+  LAST_UPDATED_BY = "NHOSEIN"
+  CREATION_DATE = "26-JUN-2015 14:56:49"
+  CREATED_BY = "NHOSEIN"
+  ENABLED_FLAG = "Y"
+  
+    BEGIN NI_METADATA_SETTINGS "MULTISEAT_ENTERPRISE_SYSTEMS"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_ENTERPRISE_SYSTEMS"
+        USED_BY = "CE"
+        VALUE = "CE"
+        ACTUAL_VALUE = "CE"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_ENTERPRISE_SYSTEMS"
+        USED_BY = "EA"
+        VALUE = "EA"
+        ACTUAL_VALUE = "EA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "SEAT_TYPE_NEGOTIATED_PRICE"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "List of seat types that can use the negotiated list price in the MMT for renewal pricing versus list"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "SEAT_TYPE_NEGOTIATED_PRICE"
+        USED_BY = "ASL"
+        VALUE = "ASL"
+        ACTUAL_VALUE = "ASL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "UPDATE_PRODUCT_ATTRIBUTES"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "Metadata used by Program NI Update VLA Product Attributes"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "UPDATE_PRODUCT_ATTRIBUTES"
+        USED_BY = "EMAIL_ADDRESS"
+        VALUE = "product.operations.support@ni.com"
+        ACTUAL_VALUE = "product.operations.support@ni.com"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "UPDATE_PRODUCT_ATTRIBUTES"
+        USED_BY = "EMAIL_FLAG"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "VLM_MGMT_TOOL"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_MGMT_TOOL"
+        USED_BY = "No License Management Tool in Use"
+        VALUE = "No License Management Tool in Use"
+        ACTUAL_VALUE = "No License Management Tool in Use"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_MGMT_TOOL"
+        USED_BY = "Unix FlexLM"
+        VALUE = "Unix FlexLM"
+        ACTUAL_VALUE = "Unix FlexLM"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_MGMT_TOOL"
+        USED_BY = "Windows FlexLM"
+        VALUE = "Windows FlexLM"
+        ACTUAL_VALUE = "Windows FlexLM"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_MGMT_TOOL"
+        USED_BY = "Windows VLM"
+        VALUE = "Windows VLM"
+        ACTUAL_VALUE = "Windows VLM"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "CONCURRENCY_LIC"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "CONCURRENT_COMPUTER"
+        VALUE = "Concurrent_Computer"
+        ACTUAL_VALUE = "Concurrent_Computer"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "CONCURRENT_UNMANAGED"
+        VALUE = "Concurrent_Unmanaged"
+        ACTUAL_VALUE = "Concurrent_Unmanaged"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "CONCURRENT_USER"
+        VALUE = "Concurrent_User"
+        ACTUAL_VALUE = "Concurrent_User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "GLOBAL CONCURRENT_COMPUTER"
+        VALUE = "Global Concurrent_Computer"
+        ACTUAL_VALUE = "Global Concurrent_Computer"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "GLOBAL CONCURRENT_UNMANAGED"
+        VALUE = "Global Concurrent_Unmanaged"
+        ACTUAL_VALUE = "Global Concurrent_Unmanaged"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "GLOBAL CONCURRENT_USER"
+        VALUE = "Global Concurrent_User"
+        ACTUAL_VALUE = "Global Concurrent_User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "NOT CONCURRENT_COMPUTER"
+        VALUE = "Not Concurrent_Computer"
+        ACTUAL_VALUE = "Not Concurrent_Computer"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "CONCURRENCY_LIC"
+        USED_BY = "NOT CONCURRENT_USER"
+        VALUE = "Not Concurrent_User"
+        ACTUAL_VALUE = "Not Concurrent_User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "DISPLAY_JA"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "DISPLAY_JA"
+        USED_BY = "DEFAULT"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EDIT_LICENSE"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI CN Service Contracts Super User"
+        VALUE = "NI CN Service Contracts Super User"
+        ACTUAL_VALUE = "NI CN Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI Discount Administrator"
+        VALUE = "NI Discount Administrator"
+        ACTUAL_VALUE = "NI Discount Administrator"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI JP Service Contracts Super User"
+        VALUE = "NI JP Service Contracts Super User"
+        ACTUAL_VALUE = "NI JP Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI KR Service Contracts Super User"
+        VALUE = "NI KR Service Contracts Super User"
+        ACTUAL_VALUE = "NI KR Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI NER Service Contracts Super User"
+        VALUE = "NI NER Service Contracts Super User"
+        ACTUAL_VALUE = "NI NER Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI Product Operations"
+        VALUE = "NI Product Operations"
+        ACTUAL_VALUE = "NI Product Operations"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI Service Contracts Super User"
+        VALUE = "NI Service Contracts Super User"
+        ACTUAL_VALUE = "NI Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_LICENSE"
+        USED_BY = "NI TW Service Contracts Super User"
+        VALUE = "NI TW Service Contracts Super User"
+        ACTUAL_VALUE = "NI TW Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EDIT_PRICING"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI CN Service Contracts Superuser"
+        VALUE = "NI CN Service Contracts Superuser"
+        ACTUAL_VALUE = "NI CN Service Contracts Superuser"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI Discount Administrator"
+        VALUE = "NI Discount Administrator"
+        ACTUAL_VALUE = "NI Discount Administrator"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI ISR User"
+        VALUE = "NI ISR User"
+        ACTUAL_VALUE = "NI ISR User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI JP ISR User"
+        VALUE = "NI JP ISR User"
+        ACTUAL_VALUE = "NI JP ISR User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI JP Service Contracts Super User"
+        VALUE = "NI JP Service Contracts Super User"
+        ACTUAL_VALUE = "NI JP Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI KR Service Contracts Super Users"
+        VALUE = "NI KR Service Contracts Super Users"
+        ACTUAL_VALUE = "NI KR Service Contracts Super Users"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI NER Service Contracts Super User"
+        VALUE = "NI NER Service Contracts Super User"
+        ACTUAL_VALUE = "NI NER Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI Product Operations"
+        VALUE = "NI Product Operations"
+        ACTUAL_VALUE = "NI Product Operations"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI Service Contracts Super User"
+        VALUE = "NI Service Contracts Super User"
+        ACTUAL_VALUE = "NI Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR Manager"
+        VALUE = "NI TSR Manager"
+        ACTUAL_VALUE = "NI TSR Manager"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User All"
+        VALUE = "NI TSR User All"
+        ACTUAL_VALUE = "NI TSR User All"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Austria"
+        VALUE = "NI TSR User Austria"
+        ACTUAL_VALUE = "NI TSR User Austria"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Belgium"
+        VALUE = "NI TSR User Belgium"
+        ACTUAL_VALUE = "NI TSR User Belgium"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Czech Republic"
+        VALUE = "NI TSR User Czech Republic"
+        ACTUAL_VALUE = "NI TSR User Czech Republic"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Denmark"
+        VALUE = "NI TSR User Denmark"
+        ACTUAL_VALUE = "NI TSR User Denmark"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Finland"
+        VALUE = "NI TSR User Finland"
+        ACTUAL_VALUE = "NI TSR User Finland"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User France"
+        VALUE = "NI TSR User France"
+        ACTUAL_VALUE = "NI TSR User France"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Germany"
+        VALUE = "NI TSR User Germany"
+        ACTUAL_VALUE = "NI TSR User Germany"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Hungary"
+        VALUE = "NI TSR User Hungary"
+        ACTUAL_VALUE = "NI TSR User Hungary"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Ireland"
+        VALUE = "NI TSR User Ireland"
+        ACTUAL_VALUE = "NI TSR User Ireland"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Italy"
+        VALUE = "NI TSR User Italy"
+        ACTUAL_VALUE = "NI TSR User Italy"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Japan"
+        VALUE = "NI TSR User Japan"
+        ACTUAL_VALUE = "NI TSR User Japan"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Korea"
+        VALUE = "NI TSR User Korea"
+        ACTUAL_VALUE = "NI TSR User Korea"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Netherlands"
+        VALUE = "NI TSR User Netherlands"
+        ACTUAL_VALUE = "NI TSR User Netherlands"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Norway"
+        VALUE = "NI TSR User Norway"
+        ACTUAL_VALUE = "NI TSR User Norway"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Poland"
+        VALUE = "NI TSR User Poland"
+        ACTUAL_VALUE = "NI TSR User Poland"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Portugal"
+        VALUE = "NI TSR User Portugal"
+        ACTUAL_VALUE = "NI TSR User Portugal"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Slovakia"
+        VALUE = "NI TSR User Slovakia"
+        ACTUAL_VALUE = "NI TSR User Slovakia"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Slovenia"
+        VALUE = "NI TSR User Slovenia"
+        ACTUAL_VALUE = "NI TSR User Slovenia"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Spain"
+        VALUE = "NI TSR User Spain"
+        ACTUAL_VALUE = "NI TSR User Spain"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Sweden"
+        VALUE = "NI TSR User Sweden"
+        ACTUAL_VALUE = "NI TSR User Sweden"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User Switzerland"
+        VALUE = "NI TSR User Switzerland"
+        ACTUAL_VALUE = "NI TSR User Switzerland"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TSR User UK"
+        VALUE = "NI TSR User UK"
+        ACTUAL_VALUE = "NI TSR User UK"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_PRICING"
+        USED_BY = "NI TW Service Contracts Superuser"
+        VALUE = "NI TW Service Contracts Superuser"
+        ACTUAL_VALUE = "NI TW Service Contracts Superuser"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "EDIT_SEATS"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI AE Customer Support"
+        VALUE = "NI AE Customer Support"
+        ACTUAL_VALUE = "NI AE Customer Support"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI AE Customer Support Superuser"
+        VALUE = "NI AE Customer Support Superuser"
+        ACTUAL_VALUE = "NI AE Customer Support Superuser"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI CN Service Contracts Superuser"
+        VALUE = "NI CN Service Contracts Superuser"
+        ACTUAL_VALUE = "NI CN Service Contracts Superuser"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI Discount Administrator"
+        VALUE = "NI Discount Administrator"
+        ACTUAL_VALUE = "NI Discount Administrator"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI JP Service Contracts Super User"
+        VALUE = "NI JP Service Contracts Super User"
+        ACTUAL_VALUE = "NI JP Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI KR Service Contracts Super User"
+        VALUE = "NI KR Service Contracts Super User"
+        ACTUAL_VALUE = "NI KR Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI NER Service Contracts Super User"
+        VALUE = "NI NER Service Contracts Super User"
+        ACTUAL_VALUE = "NI NER Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI Product Operations"
+        VALUE = "NI Product Operations"
+        ACTUAL_VALUE = "NI Product Operations"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI Service Contracts Super User"
+        VALUE = "NI Service Contracts Super User"
+        ACTUAL_VALUE = "NI Service Contracts Super User"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "EDIT_SEATS"
+        USED_BY = "NI TW Service Contracts Superuser"
+        VALUE = "NI TW Service Contracts Superuser"
+        ACTUAL_VALUE = "NI TW Service Contracts Superuser"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "GENERIC"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "GENERIC"
+        USED_BY = "PDS_ACTION"
+        VALUE = "PDS: Instance  <OLD_INSTANCE_NUMBER> was terminated and Instance <NEW_INSTANCE_NUMBER> was created by PDS."
+        ACTUAL_VALUE = "PDS: Instance  <OLD_INSTANCE_NUMBER> was terminated and Instance <NEW_INSTANCE_NUMBER> was created by PDS."
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "GENERIC"
+        USED_BY = "PDS_ACTIVITY_USER"
+        VALUE = "GTUSKA"
+        ACTUAL_VALUE = "GTUSKA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "IGNORE_LINE_CATEGORY_FOR_RENEWAL"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "Txn line categories to ignore in RENEWAL for renewals, used by NI Update VLA Product Attributes"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "IGNORE_LINE_CATEGORY_FOR_RENEWAL"
+        USED_BY = "OVERDRAFT"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "IGNORE_LINE_CATEGORY_FOR_RENEWAL"
+        USED_BY = "OVERDRAFT L1"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "IGNORE_LINE_CATEGORY_FOR_RENEWAL"
+        USED_BY = "OVERDRAFT L2"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "INTERNAL_RENEWAL_ALERT_DATE_RANGES"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "Date Ranges to send VLA internal renewal alerts"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_DATE_RANGES"
+        USED_BY = "0"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_DATE_RANGES"
+        USED_BY = "30"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_DATE_RANGES"
+        USED_BY = "60"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_DATE_RANGES"
+        USED_BY = "90"
+        VALUE = "Y"
+        ACTUAL_VALUE = "Y"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "INTERNAL_RENEWAL_ALERT_SETTINGS"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "Program settings for NI Internal renewal alert"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_SETTINGS"
+        USED_BY = "MMT_URL"
+        VALUE = "-app.nie.natinst.com:8000/pls/"
+        ACTUAL_VALUE = "-app.nie.natinst.com:8000/pls/"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_SETTINGS"
+        USED_BY = "TEST_FLAG"
+        VALUE = "N"
+        ACTUAL_VALUE = "N"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "INTERNAL_RENEWAL_ALERT_SETTINGS"
+        USED_BY = "TEST_EMAIL"
+        VALUE = "product.operations.support@ni.com"
+        ACTUAL_VALUE = "product.operations.support@ni.com"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "MMT_PAF_ELIGIBLE_SEAT_TYPES"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "List of seat types that are valid from the PAF for the NI Update VLA Product Attributes Program"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MMT_PAF_ELIGIBLE_SEAT_TYPES"
+        USED_BY = "ASL"
+        VALUE = "ASL"
+        ACTUAL_VALUE = "ASL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MMT_PAF_ELIGIBLE_SEAT_TYPES"
+        USED_BY = "VLA"
+        VALUE = "VLA"
+        ACTUAL_VALUE = "VLA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "MULTISEAT_SYSTEMS"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "ASL"
+        VALUE = "ASL"
+        ACTUAL_VALUE = "ASL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "CE"
+        VALUE = "CE"
+        ACTUAL_VALUE = "CE"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "EA"
+        VALUE = "EA"
+        ACTUAL_VALUE = "EA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "GLOBAL VLA"
+        VALUE = "GLOBAL VLA"
+        ACTUAL_VALUE = "GLOBAL VLA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "ICLA"
+        VALUE = "ICLA"
+        ACTUAL_VALUE = "ICLA"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "MSM"
+        VALUE = "MSM"
+        ACTUAL_VALUE = "MSM"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "MSS"
+        VALUE = "MSS"
+        ACTUAL_VALUE = "MSS"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "MULTI-SEAT"
+        VALUE = "MULTI-SEAT"
+        ACTUAL_VALUE = "MULTI-SEAT"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "MULTISEAT_SYSTEMS"
+        USED_BY = "SRL"
+        VALUE = "SRL"
+        ACTUAL_VALUE = "SRL"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "NILG_LANG"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "D"
+        VALUE = "Deutsch"
+        ACTUAL_VALUE = "Deutsch"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "F"
+        VALUE = "French"
+        ACTUAL_VALUE = "French"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "JA"
+        VALUE = "Japanese"
+        ACTUAL_VALUE = "Japanese"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "KO"
+        VALUE = "Korean"
+        ACTUAL_VALUE = "Korean"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "US"
+        VALUE = "English"
+        ACTUAL_VALUE = "English"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_LANG"
+        USED_BY = "ZHS"
+        VALUE = "Simplified Chinese"
+        ACTUAL_VALUE = "Simplified Chinese"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "NILG_URL"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "NILG_URL"
+        USED_BY = "DEFAULT"
+        VALUE = "http://venus.ni.com"
+        ACTUAL_VALUE = "http://venus.ni.com"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PRODUCT_FAMILY"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "PRODUCT_FAMILY"
+        USED_BY = "Developer Suite Application Tools"
+        VALUE = "Developer Suite Application Tools"
+        ACTUAL_VALUE = "Developer Suite Application Tools"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "PRODUCT_FAMILY"
+        USED_BY = "Developer Suite Deployment Tools"
+        VALUE = "Developer Suite Deployment Tools"
+        ACTUAL_VALUE = "Developer Suite Deployment Tools"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "VLM_TOOL_VERSION"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = ""
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_TOOL_VERSION"
+        USED_BY = "1"
+        VALUE = "1.X"
+        ACTUAL_VALUE = "1.X"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_TOOL_VERSION"
+        USED_BY = "2"
+        VALUE = "2.X"
+        ACTUAL_VALUE = "2.X"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_TOOL_VERSION"
+        USED_BY = "3"
+        VALUE = "3.X"
+        ACTUAL_VALUE = "3.X"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "VLM_TOOL_VERSION"
+        USED_BY = "None"
+        VALUE = "None"
+        ACTUAL_VALUE = "None"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+    BEGIN NI_METADATA_SETTINGS "PROD_SERVER"
+      APPLICATION_SHORT_NAME = "NICS"
+      METADATA_NAME = "NICS_CMA"
+      DESCRIPTION = "Production Server Name"
+      LAST_UPDATE_DATE = "26-JUN-2015 15:00:02"
+      LAST_UPDATED_BY = ""
+      CREATION_DATE = "26-JUN-2015 14:58:30"
+      CREATED_BY = ""
+      ENABLED_FLAG = "Y"
+      
+      BEGIN NI_METADATA_VALUES
+        APPLICATION_SHORT_NAME = "NICS"
+        METADATA_NAME = "NICS_CMA"
+        SETTING_NAME = "PROD_SERVER"
+        USED_BY = "NAME"
+        VALUE = "EBIZ"
+        ACTUAL_VALUE = "EBIZ"
+        LAST_UPDATE_DATE = "26-JUN-2015 17:04:40"
+        LAST_UPDATED_BY = ""
+        CREATION_DATE = "26-JUN-2015 17:04:40"
+        CREATED_BY = ""
+        ENABLED_FLAG = "Y"
+      END NI_METADATA_VALUES
+    
+    END NI_METADATA_SETTINGS
+
+END NI_METADATA
+    
